@@ -1,0 +1,6 @@
+#!/bin/bash -e
+docker run -ti --init --rm \
+  --env-file .env \
+  -v "$PWD/src:/usr/src/app/src" \
+  shouter \
+  node src/index.js "$@"
